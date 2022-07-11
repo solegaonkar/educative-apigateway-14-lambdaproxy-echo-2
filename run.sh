@@ -77,6 +77,6 @@ echo $url
 # -----------------------------------------------------------------
 # Invoke the URL to test the response
 # -----------------------------------------------------------------
-curl --location --request POST $url --header 'Content-Type: application/json' --data-raw '{ "message": "Hello World" }'
+curl --location --request POST $url --header 'Content-Type: application/json' --data-raw '{ "message": "Hello World" }' | jq -r "."
 
 
